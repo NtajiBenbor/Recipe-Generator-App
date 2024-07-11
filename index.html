@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Random recipe Generator</title>
+</head>
+<body>
+    <!-- container/wrapper for the page -->
+    <main class="container">
+        <!-- nav section: funtionality for the recipe genration is triggred from here -->
+        <div class="nav">
+            <h1>Feeling hungry</h1>
+            <p class="title">Get a random meal reciepe by clicking below</p>
+            <!-- button that triggers recipe generation -->
+            <button id="gen-btn">Get recipe <i class="icon"></i></button>
+        </div>
+        <!-- Main section where the recipe is generated -->
+        <section class="main-section  hide">
+            <!-- right column -->
+            <aside class="right-col">
+                <div class="img-container">
+                    <img src="" alt="" id="recipe-img">
+                </div>
+                <!-- common tags/meta-data of the recipe -->
+                <div class="meta-data">
+                    <p><b>Description: </b><span class="description"></span></p>
+                    <p><b>Categorie: </b><span class="recipe-cat"></span></p>
+                    <p><b>Region: </b><span class="recipe-area"></span></p>
+                    <p><b>Calorie Count: </b><span class="cal-count"></span></p>
+                </div>
+                    <!-- ingredients -->
+                    <div>
+                        <h2>Ingredients:</h2>
+                        <ul class="ingredients-ul">
+                            <!-- <li>Items 1</li> -->
+                        </ul>
+                    </div>    
+                </div>
+            </aside>
+
+            <!-- left column -->
+            <aside class="left-col">
+                <h3 id="meal-name"></h3>
+                <p id="instructions"></p>
+
+                 <!-- youtube video for recipe -->
+                <section>
+                    <h4>Video recipe</h4>
+                    <iframe  id="video" src="" frameborder="0" allowfullscreen>
+
+                    </iframe>
+
+                </section>
+            </aside>
+        </section>
+
+       
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
