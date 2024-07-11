@@ -161,6 +161,15 @@ function updateData(meal){
 
 // })
 
+function randomNumber(previousNumber = null){
+  let currentNumber = Math.floor(Math.random() * recipies.length);
+
+   while(currentNumber === previousNumber){
+    currentNumber = Math.floor(Math.random() * recipies.length)
+   }
+   return currentNumber
+}
+
 //event listen for the get recipe btn
 btn.addEventListener('click',()=>{
     //select all the li's on the page
@@ -176,7 +185,7 @@ btn.addEventListener('click',()=>{
    }
 
    //genrate a random number between 0 and the length of the array
-    currentItem = Math.floor(Math.random()* recipies.length);
+    currentItem = randomNumber();
    //randomly genrated number is then passed into the update function call to access the recipies array by its index.
     updateData(currentItem);
 
